@@ -1,44 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
-	<title>Exercice 4 Janvier 2022</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Exercice 2</title>
 	<style>
-		body {
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        :root {
+            --color-yellow: #FDC63C;
+            --color-yellow-light: #FBF4CD;
+            --color-pink: #c194db;
+            --color-white: #FAFCFE;
+            --color-grey: #A1A1A1;
+            --demi-cercle-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
             margin: 0;
             padding: 0;
-			box-sizing: border-box;
-            background-color: #4162CB;
-            height: 100vh;
-		}
+            box-sizing: border-box;
+            min-height: 100vh;
+            background: linear-gradient(175deg, transparent 50%, var(--color-yellow) 120%),
+            linear-gradient(45deg, transparent 50%, var(--color-pink) 120%);
+        }
 
-		main {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-            height: 100vh;
-		}
+        a {
+            color: inherit;
+        }
 
-		main img {
-			min-width: 150px;
-            width: 25%;
-			max-width: 400px;
-            height: auto;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        button {
+            outline: none;
+            width: 150px;
+            height: 40px;
+            border-radius: 25px;
+            border: none;
+            font-size: 0.9em;
+        }
+
+
+        main {
+            width: 80vw;
+            margin: 20px auto 0;
+        }
+
+        /* -------------------- HEADER --------------------*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	        flex-wrap: wrap;
+            font-weight: 500;
+            width: 90%;
+            height: 120px;
+            margin: auto;
+        }
+
+        header div ul,
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header div:nth-child(1) ul li:nth-child(1) {
+            height: calc(var(--demi-cercle-size) * 2);
+            width: var(--demi-cercle-size);
+            border-bottom-right-radius: calc(var(--demi-cercle-size) * 2);
+            border-top-right-radius: calc(var(--demi-cercle-size) * 2);
+            background-color: black;
+            margin-right: 20px;
+        }
+
+        header div:nth-child(1) ul li:nth-child(2) {
+            border-left: 2px solid black;
+            padding-left: 5px;
+        }
+
+        header nav ul li {
+            padding: 7px;
+        }
+
+        header nav ul li:nth-child(-n+2):after {
+            content: ".";
+            color: black;
+            padding-left: 15px;
+        }
+
+        header div:nth-child(3) ul li:nth-child(1) {
+            margin-right: 30px;
+        }
+
+        header div:nth-child(3) ul li button {
+            background-color: black;
+            color: var(--color-white);
+        }
+
+        /* -------------------- Section First --------------------*/
+        main section:nth-child(1) {
+            margin-top: 120px;
+        }
+
+        main section:nth-child(1) article {
+            text-align: center;
+        }
+
+        main section:nth-child(1) article h1 {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        main section:nth-child(1) article button {
+            background-color: #FDC63C;
+            margin-top: 30px;
+        }
+
+        /* -------------------- Section Second --------------------*/
+        main section:nth-child(2) > div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        main section:nth-child(2) > div:nth-child(1) a {
+            font-weight: 600;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-wrap: wrap;
-            margin: 20px;
-			box-shadow: 10px 10px 30px #2f4593,
-                        20px 20px 60px #263778;
-		}
+	        justify-content: space-evenly;
+	        align-items: center;
+	        flex-wrap: wrap;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article {
+            width: 300px;
+            height: 175px;
+            margin: 5px;
+            padding: 20px;
+	        border-radius: 20px;
+	        font-size: 0.9em;
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(odd) {
+            background-color: black;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(odd) h3,
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(odd) a{
+            color: var(--color-white);
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(odd) h4,
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(odd) p{
+            color: var(--color-grey);
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article:nth-child(even) {
+            background: linear-gradient(to right bottom, transparent, var(--color-yellow));
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > div:nth-child(1) h4,
+        main section:nth-child(2) > div:nth-child(2) article > div:nth-child(1) p {
+            margin: 0;
+            padding: 0;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > h3 {
+            margin: 20px 0 0 0;
+            padding: 0;
+	        font-size: 1.8em;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > p {
+	        font-weight: 400;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > a {
+	        text-decoration: none;
+	        display: flex;
+	        align-items: center;
+        }
+
+        main section:nth-child(2) > div:nth-child(2) article > a > span {
+	        font-size: 2em;
+	        margin-left: 10px;
+	        margin-top: 3px;
+        }
 	</style>
 </head>
 <body>
+	<header>
+		<div>
+			<ul>
+				<li></li>
+				<li>hello@cargo.io</li>
+			</ul>
+		</div>
+		<nav>
+			<ul>
+				<li>Product</li>
+				<li>Our Work</li>
+				<li>Services</li>
+			</ul>
+		</nav>
+		<div>
+			<ul>
+				<li>FAQ</li>
+				<li>
+					<button>Get started</button>
+				</li>
+			</ul>
+		</div>
+	</header>
 <main>
-	<img src="./assets/img/1.png" alt="">
-	<img src="./assets/img/2.png" alt="">
-	<img src="./assets/img/3.png" alt="">
+	<section>
+		<article>
+			<h1>Cargo Design Agency</h1>
+			<p>Ahead with 100+ Amazing clients with 20+ country</p>
+			<p>Served the best design materials</p>
+
+			<button>Get Started</button>
+		</article>
+	</section>
+	<section>
+		<div>
+			<h2>Case Studies</h2>
+			<a href="">View All</a>
+		</div>
+		<div>
+			<article>
+				<div>
+					<h4>TECHNOLOGY</h4>
+					<p>Dashboard</p>
+				</div>
+				<h3>Google</h3>
+				<p>Best technology results-driven web design and marketing agency.</p>
+				<a href="">View Case Study <span>&#8594;</span></a>
+			</article>
+			<article>
+				<div>
+					<h4>FINANCE</h4>
+					<p>Mobile App</p>
+				</div>
+				<h3>Dunkins Tech</h3>
+				<p>Using a proven method of innovative design marketing strategies.</p>
+				<a href="">View Case Study <span>&#8594;</span></a>
+			</article>
+			<article>
+				<div>
+					<h4>TRAVEL</h4>
+					<p>Mobile App</p>
+				</div>
+				<h3>Nokia Gadget</h3>
+				<p>Build customise and play Using plug data Driven customers.</p>
+				<a href="">View Case Study <span>&#8594;</span></a>
+			</article>
+		</div>
+	</section>
 </main>
 </body>
 </html>
