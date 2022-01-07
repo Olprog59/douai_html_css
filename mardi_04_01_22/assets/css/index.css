@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(175deg, transparent 50%, #FDC63C 120%), linear-gradient(45deg, transparent 50%, #c194db 120%);
+  background-attachment: fixed;
+}
+body a {
+  color: inherit;
+}
+body button {
+  outline: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.9em;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+body header ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body header div:nth-child(1) ul li:nth-child(1) {
+  height: 40px;
+  width: 20px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: black;
+  margin-right: 20px;
+}
+body header div:nth-child(1) ul li:nth-child(2) {
+  border-left: 2px solid black;
+  padding-left: 15px;
+}
+body header nav ul li {
+  padding: 10px;
+}
+body header nav ul li:nth-child(n+2):before {
+  content: ".";
+  position: relative;
+  left: -10px;
+}
+body header div:nth-child(3) ul li {
+  padding: 10px;
+}
+body header div:nth-child(3) ul button {
+  background-color: black;
+  color: #FAFCFE;
+}
+body main {
+  width: 80%;
+  margin: auto;
+}
+body main section {
+  margin: auto;
+}
+body main section:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main section:nth-child(1) article {
+  text-align: center;
+}
+body main section:nth-child(1) article h1 {
+  font-size: 3em;
+  margin: 80px 0 10px 0;
+  padding: 0;
+}
+body main section:nth-child(1) article p {
+  margin: 10px;
+  padding: 0;
+}
+body main section:nth-child(1) article button {
+  margin-top: 20px;
+  background-color: #FDC63C;
+}
+body main section:nth-child(2) div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main section:nth-child(2) div:nth-child(2) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body main section:nth-child(2) div:nth-child(2) article {
+  width: 320px;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 20px;
+}
+body main section:nth-child(2) div:nth-child(2) article h3, body main section:nth-child(2) div:nth-child(2) article p, body main section:nth-child(2) div:nth-child(2) article h4 {
+  margin: 5px;
+  padding: 5px;
+}
+body main section:nth-child(2) div:nth-child(2) article h3 {
+  font-size: 2em;
+}
+body main section:nth-child(2) div:nth-child(2) article a {
+  padding: 5px;
+  margin: 20px 0 0 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+body main section:nth-child(2) div:nth-child(2) article a span {
+  font-size: 2em;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+body main section:nth-child(2) div:nth-child(2) article:nth-child(odd) {
+  background-color: black;
+  color: #FAFCFE;
+}
+body main section:nth-child(2) div:nth-child(2) article:nth-child(odd) div {
+  color: #A1A1A1;
+}
+body main section:nth-child(2) div:nth-child(2) article:nth-child(odd) p {
+  color: #A1A1A1;
+}
+body main section:nth-child(2) div:nth-child(2) article:nth-child(even) {
+  background: linear-gradient(to right bottom, transparent, #FDC63C);
+}
+body main section:nth-child(2) div:nth-child(2) article div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$color-yellow: #FDC63C;
+$color-yellow-light: #FBF4CD;
+$color-pink: #c194db;
+$color-white: #FAFCFE;
+$color-grey: #A1A1A1;
+$demi-cercle-size: 20px;
+
+@mixin flex($jc: space-between) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin marpad($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  @include marpad();
+  box-sizing: border-box;
+  background-image: linear-gradient(175deg, transparent 50%, $color-yellow 120%),
+  linear-gradient(45deg, transparent 50%, $color-pink 120%);
+  background-attachment: fixed;
+
+  a {
+    color: inherit;
+  }
+
+  button {
+    outline: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    font-size: 0.9em;
+  }
+
+  header {
+    @include flex;
+    width: 90%;
+    margin: auto;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      @include flex(center);
+    }
+
+    $padding: 10px;
+
+    div:nth-child(1) {
+      ul {
+        li {
+          &:nth-child(1) {
+            height: $demi-cercle-size * 2;
+            width: $demi-cercle-size;
+            border-bottom-right-radius: $demi-cercle-size * 2;
+            border-top-right-radius: $demi-cercle-size * 2;
+            background-color: black;
+            margin-right: 20px;
+          }
+
+          &:nth-child(2) {
+            border-left: 2px solid black;
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+
+    nav {
+      ul {
+        li {
+          padding: $padding;
+
+          &:nth-child(n+2):before {
+            content: ".";
+            position: relative;
+            left: -$padding;
+          }
+        }
+      }
+    }
+
+    div:nth-child(3) {
+      ul {
+        li {
+          padding: $padding;
+        }
+
+        button {
+          background-color: black;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  main {
+    width: 80%;
+    margin: auto;
+
+    section {
+      margin: auto;
+
+      &:nth-child(1) {
+        @include flex(center);
+
+        article {
+          text-align: center;
+
+          h1 {
+            font-size: 3em;
+            @include marpad(80px 0 10px 0)
+          }
+
+          p {
+            @include marpad(10px)
+          }
+
+          button {
+            margin-top: 20px;
+            background-color: $color-yellow;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+
+        div {
+
+          &:nth-child(1) {
+            @include flex()
+          }
+
+          &:nth-child(2) {
+            @include flex(space-evenly);
+
+            article {
+              width: 320px;
+              margin: 5px;
+              padding: 20px;
+              border-radius: 20px;
+
+              h3, p, h4 {
+                @include marpad(5px, 5px)
+              }
+
+              h3 {
+                font-size: 2em;
+              }
+
+              a {
+                padding: 5px;
+                margin: 20px 0 0 5px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                span {
+                  font-size: 2em;
+                  margin-left: 10px;
+                  margin-top: 3px;
+                }
+              }
+
+              &:nth-child(odd) {
+                background-color: black;
+                color: $color-white;
+                div {
+                  color: $color-grey;
+
+                }
+                p {
+                  color: $color-grey;
+                }
+              }
+
+              &:nth-child(even) {
+                background: linear-gradient(to right bottom, transparent, $color-yellow);
+              }
+
+              div {
+                @include flex();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
